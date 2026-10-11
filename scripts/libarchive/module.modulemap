@@ -1,0 +1,7 @@
+module CLibArchive [system] {
+    header "archive.h"
+    header "archive_entry.h"
+    link "iconv"
+    link "z"
+    export *
+}

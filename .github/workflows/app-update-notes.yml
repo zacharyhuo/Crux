@@ -1,0 +1,108 @@
+name: Refresh app update notes
+
+on:
+  repository_dispatch:
+    types: [crux-app-notes]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Already promoted application tag; refresh notes without rebuilding
+        required: true
+        type: string
+
+permissions:
+  contents: read
+concurrency:
+  group: crux-app-update-publication
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  plan:
+    if: github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    permissions:
+      contents: read
+      actions: read
+      deployments: read
+    outputs:
+      channel: ${{ steps.plan.outputs.channel }}
+      environment: ${{ steps.plan.outputs.environment }}
+      source_sha: ${{ steps.plan.outputs.source_sha }}
+      public_key: ${{ steps.plan.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag || github.event.client_payload.tag }}
+          STABLE_PUBLIC: ${{ vars.SPARKLE_STABLE_PUBLIC_KEY }}
+          BETA_PUBLIC: ${{ vars.SPARKLE_BETA_PUBLIC_KEY }}
+        run: node tools/app-updates/preflight.mjs --tag "$RELEASE_TAG" --publication
+
+  refresh:
+    needs: plan
+    if: github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    timeout-minutes: 15
+    environment:
+      name: ${{ needs.plan.outputs.environment }}
+    permissions:
+      contents: write
+      actions: read
+      deployments: read
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.event.client_payload.tag }}
+      CHANNEL: ${{ needs.plan.outputs.channel }}
+      SPARKLE_PUBLIC_ED_KEY: ${{ needs.plan.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Revalidate main policy and tag after approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STABLE_PUBLIC: ${{ vars.SPARKLE_STABLE_PUBLIC_KEY }}
+          BETA_PUBLIC: ${{ vars.SPARKLE_BETA_PUBLIC_KEY }}
+          EXPECTED_SOURCE_SHA: ${{ needs.plan.outputs.source_sha }}
+        run: |
+          node tools/app-updates/preflight.mjs --tag "$RELEASE_TAG" --publication > "$RUNNER_TEMP/notes-plan.json"
+          test "$(node -p 'require(process.argv[1]).sourceSHA' "$RUNNER_TEMP/notes-plan.json")" = "$EXPECTED_SOURCE_SHA"
+          test "$(node -p 'require(process.argv[1]).publicKey' "$RUNNER_TEMP/notes-plan.json")" = "$SPARKLE_PUBLIC_ED_KEY"
+      - name: Download original assets without signing credentials
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node tools/app-updates/fetch-release.mjs --tag "$RELEASE_TAG" --directory "$RUNNER_TEMP/Crux-notes"
+      - name: Verify ledger provenance and actual ZIP identity before exposing the key
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          release_id="$(gh api "repos/zacharyhuo/Crux/releases/tags/$RELEASE_TAG" --jq '.id')"
+          node tools/app-updates/publish.mjs --verify-only --release "$release_id" --tag "$RELEASE_TAG" --directory "$RUNNER_TEMP/Crux-notes"
+      - name: Fetch checksum-pinned signing tool (no Package.swift)
+        run: node tools/app-updates/fetch-signer.mjs --directory "$RUNNER_TEMP/CruxSigner"
+      - name: Refresh feed with only the approved channel key
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
+        run: |
+          key_file="$RUNNER_TEMP/crux-sparkle-key.txt"
+          test ! -e "$key_file"
+          trap 'rm -f -- "$key_file"' EXIT
+          umask 077
+          test -n "$SPARKLE_PRIVATE_KEY"
+          printf '%s' "$SPARKLE_PRIVATE_KEY" > "$key_file"
+          unset SPARKLE_PRIVATE_KEY
+          release_id="$(gh api "repos/zacharyhuo/Crux/releases/tags/$RELEASE_TAG" --jq '.id')"
+          node tools/app-updates/publish.mjs --release "$release_id" --tag "$RELEASE_TAG" --directory "$RUNNER_TEMP/Crux-notes" \
+            --key-file "$key_file" --sign-tool "$RUNNER_TEMP/CruxSigner/bin/sign_update"

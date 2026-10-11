@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "families": [
+    {
+      "sourceId": "dev.crux",
+      "familyId": "java",
+      "title": "Java",
+      "identifier": "dev.crux.java",
+      "bundleName": "Java",
+      "defaultVariantId": "java-25-en",
+      "latestReleaseId": "4444444444444444444444444444444444444444444444444444444444444444",
+      "releases": [
+        {
+          "releaseId": "3333333333333333333333333333333333333333333333333333333333333333",
+          "variantId": "java-25-en",
+          "versionLine": "25",
+          "language": "en",
+          "version": "25.0.4",
+          "revision": 1,
+          "identifier": "dev.crux.java",
+          "artifact": {
+            "url": "https://example.invalid/artifacts/java-25-en/3333333333333333333333333333333333333333333333333333333333333333/Java.tgz",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 12345
+          },
+          "publishedAt": "2026-09-26T00:00:00.000Z",
+          "channel": "stable",
+          "support": "archived"
+        },
+        {
+          "releaseId": "4444444444444444444444444444444444444444444444444444444444444444",
+          "variantId": "java-25-en",
+          "versionLine": "25",
+          "language": "en",
+          "version": "25.0.4.1",
+          "revision": 1,
+          "identifier": "dev.crux.java",
+          "artifact": {
+            "url": "https://example.invalid/artifacts/java-25-en/4444444444444444444444444444444444444444444444444444444444444444/Java.tgz",
+            "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "bytes": 23456
+          },
+          "publishedAt": "2026-09-27T00:00:00.000Z",
+          "channel": "stable",
+          "support": "supported"
+        }
+      ]
+    }
+  ]
+}

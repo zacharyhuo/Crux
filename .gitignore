@@ -1,0 +1,66 @@
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode per-user state
+**/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Xcode build products and archives
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.xcarchive
+
+# Reproducible native dependency outputs (regenerate with scripts/)
+Artifacts/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.pins
+
+# Keep Package.resolved under version control for this application so every
+# developer and CI build resolves the same dependency versions.
+!Package.resolved
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift tooling caches
+.swiftlint-cache/
+.swiftformat-cache/
+
+# Editors and temporary files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Local documentation
+/docs/
+
+# Optional real-artifact acceptance input; never ship or commit generated docs.
+/CruxTests/Spring_Framework.docset/
+/CruxTests/SpringAcceptanceCatalog.json
+/CruxTests/SpringAcceptanceOld.tgz
+/CruxTests/SpringAcceptanceNew.tgz
+# Opt-in TLS acceptance configuration; generated certificate and endpoint are local.
+/CruxTests/PythonSupplyAcceptance.json
+
+# Generated signing material must never be committed.
+private-key.txt
+ephemeral-test-key.txt
+*.p12
+*.p8

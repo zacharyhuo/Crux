@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "families": [
+    {
+      "sourceId": "dev.crux",
+      "familyId": "python",
+      "title": "Python",
+      "identifier": "dev.crux.python",
+      "bundleName": "Python",
+      "defaultVariantId": "python-3-14-en",
+      "latestReleaseId": "2222222222222222222222222222222222222222222222222222222222222222",
+      "releases": [
+        {
+          "releaseId": "1111111111111111111111111111111111111111111111111111111111111111",
+          "variantId": "python-3-13-en",
+          "versionLine": "3.13",
+          "language": "en",
+          "version": "3.13.9",
+          "revision": 1,
+          "identifier": "dev.crux.python",
+          "artifact": {
+            "url": "https://example.invalid/artifacts/python-3-13-en/1111111111111111111111111111111111111111111111111111111111111111/Python.tgz",
+            "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "bytes": 12345
+          },
+          "publishedAt": "2026-09-26T00:00:00.000Z",
+          "channel": "stable",
+          "support": "archived"
+        },
+        {
+          "releaseId": "2222222222222222222222222222222222222222222222222222222222222222",
+          "variantId": "python-3-14-en",
+          "versionLine": "3.14",
+          "language": "en",
+          "version": "3.14.7",
+          "revision": 2,
+          "identifier": "dev.crux.python",
+          "artifact": {
+            "url": "https://example.invalid/artifacts/python-3-14-en/2222222222222222222222222222222222222222222222222222222222222222/Python.tgz",
+            "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "bytes": 23456
+          },
+          "publishedAt": "2026-09-27T00:00:00.000Z",
+          "channel": "stable",
+          "support": "supported"
+        }
+      ]
+    }
+  ]
+}

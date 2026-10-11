@@ -1,0 +1,187 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*", "beta-v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag in main history; publication runs only from main
+        required: true
+        type: string
+      signing_mode:
+        type: choice
+        options: [adhoc, developer-id]
+        default: adhoc
+
+permissions:
+  contents: read
+concurrency:
+  group: crux-app-update-publication
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  plan:
+    runs-on: macos-26
+    permissions:
+      contents: read
+      actions: read
+      deployments: read
+    outputs:
+      channel: ${{ steps.plan.outputs.channel }}
+      environment: ${{ steps.plan.outputs.environment }}
+      source_sha: ${{ steps.plan.outputs.source_sha }}
+      automation_sha: ${{ steps.plan.outputs.automation_sha }}
+      public_key: ${{ steps.plan.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - id: plan
+        name: Bind tag to main and inspect the real environment gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+          SIGNING_MODE: ${{ inputs.signing_mode || 'adhoc' }}
+          STABLE_PUBLIC: ${{ vars.SPARKLE_STABLE_PUBLIC_KEY }}
+          BETA_PUBLIC: ${{ vars.SPARKLE_BETA_PUBLIC_KEY }}
+        run: |
+          args=(); if [ "$GITHUB_EVENT_NAME" = workflow_dispatch ]; then args+=(--publication); fi
+          node tools/app-updates/preflight.mjs --tag "$RELEASE_TAG" --signing-mode "$SIGNING_MODE" "${args[@]}"
+
+  build:
+    needs: plan
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    outputs:
+      artifact_id: ${{ steps.upload.outputs.artifact-id }}
+      sha256: ${{ steps.pack.outputs.sha256 }}
+      run_attempt: ${{ steps.pack.outputs.run_attempt }}
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      SIGNING_MODE: ${{ inputs.signing_mode || 'adhoc' }}
+      CHANNEL: ${{ needs.plan.outputs.channel }}
+      SOURCE_SHA: ${{ needs.plan.outputs.source_sha }}
+      AUTOMATION_SHA: ${{ needs.plan.outputs.automation_sha }}
+      PUBLIC_KEY: ${{ needs.plan.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ needs.plan.outputs.source_sha }}
+          path: source
+          persist-credentials: false
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ needs.plan.outputs.automation_sha }}
+          path: automation
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Test and archive candidate without signing secrets
+        working-directory: source
+        run: |
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          scheme=Crux; config=Release
+          if [ "$CHANNEL" = beta ]; then scheme='Crux Beta'; config=BetaRelease; fi
+          entitlements=Crux/Crux.entitlements
+          if [ "$SIGNING_MODE" = adhoc ]; then entitlements=Crux/Crux-AdHoc.entitlements; fi
+          node --test "$GITHUB_WORKSPACE/automation/tools/app-updates/test/"*.test.mjs
+          bash scripts/build-libarchive-xcframework.sh --build
+          swift test --package-path Packages/CruxCore
+          xcodebuild archive -project Crux.xcodeproj -scheme "$scheme" -configuration "$config" \
+            -destination 'generic/platform=macOS' -archivePath "$RUNNER_TEMP/Crux.xcarchive" -derivedDataPath "$RUNNER_TEMP/CruxBuild" \
+            ARCHS=arm64 ONLY_ACTIVE_ARCH=NO CODE_SIGN_STYLE=Manual CODE_SIGN_IDENTITY=- CODE_SIGN_INJECT_BASE_ENTITLEMENTS=NO \
+            CRUX_CODE_SIGN_ENTITLEMENTS="$entitlements" \
+            SPARKLE_PUBLIC_ED_KEY="$PUBLIC_KEY"
+      - id: pack
+        name: Bind candidate payload to this exact CI run
+        working-directory: automation
+        run: |
+          node tools/app-updates/artifact.mjs --mode pack --archive "$RUNNER_TEMP/Crux.xcarchive" --output "$RUNNER_TEMP/Crux-payload" \
+            --tag "$RELEASE_TAG" --source-sha "$SOURCE_SHA" --automation-sha "$AUTOMATION_SHA" \
+            --run-id "$GITHUB_RUN_ID" --run-attempt "$GITHUB_RUN_ATTEMPT" --public-key "$PUBLIC_KEY" --signing-mode "$SIGNING_MODE"
+      - id: upload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: crux-candidate-${{ needs.plan.outputs.channel }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/Crux-payload/
+          if-no-files-found: error
+          retention-days: 7
+
+  sign-publish:
+    needs: [plan, build]
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
+    runs-on: macos-26
+    timeout-minutes: 30
+    environment:
+      name: ${{ needs.plan.outputs.environment }}
+    permissions:
+      contents: write
+      actions: read
+      deployments: read
+    env:
+      RELEASE_TAG: ${{ inputs.tag }}
+      SIGNING_MODE: ${{ inputs.signing_mode }}
+      CHANNEL: ${{ needs.plan.outputs.channel }}
+      SPARKLE_PUBLIC_ED_KEY: ${{ needs.plan.outputs.public_key }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ needs.plan.outputs.automation_sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Revalidate gate and immutable tag after approval
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STABLE_PUBLIC: ${{ vars.SPARKLE_STABLE_PUBLIC_KEY }}
+          BETA_PUBLIC: ${{ vars.SPARKLE_BETA_PUBLIC_KEY }}
+          EXPECTED_SOURCE_SHA: ${{ needs.plan.outputs.source_sha }}
+        run: |
+          node tools/app-updates/preflight.mjs --tag "$RELEASE_TAG" --signing-mode "$SIGNING_MODE" --publication > "$RUNNER_TEMP/approved-plan.json"
+          test "$(node -p 'require(process.argv[1]).sourceSHA' "$RUNNER_TEMP/approved-plan.json")" = "$EXPECTED_SOURCE_SHA"
+          test "$(node -p 'require(process.argv[1]).publicKey' "$RUNNER_TEMP/approved-plan.json")" = "$SPARKLE_PUBLIC_ED_KEY"
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          artifact-ids: ${{ needs.build.outputs.artifact_id }}
+          path: ${{ runner.temp }}/Crux-payload
+          merge-multiple: true
+      - name: Verify candidate receipt and structure before any key file exists
+        env:
+          EXPECTED_SOURCE_SHA: ${{ needs.plan.outputs.source_sha }}
+          EXPECTED_AUTOMATION_SHA: ${{ needs.plan.outputs.automation_sha }}
+          EXPECTED_RUN_ATTEMPT: ${{ needs.build.outputs.run_attempt }}
+          EXPECTED_SHA256: ${{ needs.build.outputs.sha256 }}
+        run: |
+          node tools/app-updates/artifact.mjs --mode unpack --directory "$RUNNER_TEMP/Crux-payload" --output "$RUNNER_TEMP/Crux-verified" \
+            --tag "$RELEASE_TAG" --source-sha "$EXPECTED_SOURCE_SHA" --automation-sha "$EXPECTED_AUTOMATION_SHA" \
+            --run-id "$GITHUB_RUN_ID" --run-attempt "$EXPECTED_RUN_ATTEMPT" --public-key "$SPARKLE_PUBLIC_ED_KEY" \
+            --signing-mode "$SIGNING_MODE" --sha256 "$EXPECTED_SHA256"
+      - name: Fetch independent checksum-pinned Sparkle signer (no Package.swift)
+        run: node tools/app-updates/fetch-signer.mjs --directory "$RUNNER_TEMP/CruxSigner"
+      - name: Validate actual app metadata and code signature without a private key
+        run: |
+          name=Crux; if [ "$CHANNEL" = beta ]; then name='Crux Beta'; fi
+          node tools/app-updates/inspect-candidate.mjs --app "$RUNNER_TEMP/Crux-verified/Crux.xcarchive/Products/Applications/$name.app" \
+            --tag "$RELEASE_TAG" --channel "$CHANNEL" --public-key "$SPARKLE_PUBLIC_ED_KEY"
+      - name: Sign and publish with only this environment's key
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SPARKLE_PRIVATE_KEY: ${{ secrets.SPARKLE_PRIVATE_KEY }}
+          CERTIFICATE_BASE64: ${{ secrets.DEVELOPER_ID_APPLICATION_CERTIFICATE_BASE64 }}
+          CERTIFICATE_PASSWORD: ${{ secrets.DEVELOPER_ID_APPLICATION_CERTIFICATE_PASSWORD }}
+          KEYCHAIN_PASSWORD: ${{ secrets.RELEASE_KEYCHAIN_PASSWORD }}
+          DEVELOPMENT_TEAM: ${{ secrets.APPLE_DEVELOPMENT_TEAM }}
+          NOTARY_KEY_BASE64: ${{ secrets.APP_STORE_CONNECT_API_KEY_P8_BASE64 }}
+          NOTARY_KEY_ID: ${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}
+          NOTARY_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}
+        run: bash tools/app-updates/publish-release.sh

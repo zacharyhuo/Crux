@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main, "develop/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-26
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+
+      - name: Verify appcast and Release notes binding
+        run: node --test tools/app-updates/test/*.test.mjs
+
+      - name: Verify licenses and notices
+        run: |
+          test -s LICENSE
+          test -s THIRD_PARTY_NOTICES.md
+          cmp LICENSE Crux/Crux-LICENSE.txt
+          test -s Crux/ThirdParty-LICENSES.txt
+          test -s Crux/Sparkle-LICENSE.txt
+
+      - name: Build pinned arm64 libarchive artifact
+        run: ./scripts/build-libarchive-xcframework.sh --build
+
+      - name: Test CruxCore
+        run: swift test --package-path Packages/CruxCore
+
+      - name: Verify symbol-search performance
+        run: |
+          swift test -c release \
+            --package-path Packages/CruxCore \
+            --filter SymbolSearchPerformanceTests
+
+      - name: Verify full-text-search performance
+        run: |
+          swift test -c release \
+            --package-path Packages/CruxCore \
+            --filter FullTextSearchPerformanceTests
+
+      - name: Build app and tests with Swift 6 checks
+        run: |
+          xcodebuild build-for-testing \
+            -project Crux.xcodeproj \
+            -scheme 'Crux Beta' \
+            -configuration BetaDebug \
+            -destination 'platform=macOS' \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Run app unit and launch UI tests
+        run: |
+          xcodebuild test-without-building \
+            -project Crux.xcodeproj \
+            -scheme 'Crux Beta' \
+            -configuration BetaDebug \
+            -destination 'platform=macOS' \
+            -only-testing:CruxTests \
+            -only-testing:CruxUITests/CruxUITests/testWelcomeTabUsesTheNewPrimaryActions \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Build Apple Silicon Release
+        run: |
+          xcodebuild build \
+            -project Crux.xcodeproj \
+            -scheme Crux \
+            -configuration Release \
+            -destination 'generic/platform=macOS' \
+            -derivedDataPath .build/DerivedData \
+            ARCHS=arm64 \
+            ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO
+          executable='.build/DerivedData/Build/Products/Release/Crux.app/Contents/MacOS/Crux'
+          test "$(lipo -archs "${executable}")" = 'arm64'

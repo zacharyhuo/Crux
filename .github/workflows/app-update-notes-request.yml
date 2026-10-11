@@ -1,0 +1,28 @@
+name: Request app update notes refresh
+
+on:
+  release:
+    types: [edited]
+
+permissions:
+  contents: read
+
+jobs:
+  request:
+    if: '!github.event.release.draft'
+    runs-on: macos-26
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Forward only validated tag data, never signing secrets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: node tools/app-updates/request-notes.mjs --tag "$RELEASE_TAG"

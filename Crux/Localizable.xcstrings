@@ -1,0 +1,3138 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "library.sources.origin.removed" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Removed source" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已删除来源" } }
+      }
+    },
+    "The previous catalog cache could not be migrated. Installed documents remain available." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The previous catalog cache could not be migrated. Installed documents remain available." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "旧目录缓存未能迁移，已安装文档仍可使用。" } }
+      }
+    },
+    "Local Imports" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Local Imports" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "本地导入" } }
+      }
+    },
+    "Legacy Catalog" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Legacy Catalog" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "历史目录" } }
+      }
+    },
+    "Crux Docset is not anonymously accessible yet (the repository may still be private)." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Crux Docset is not anonymously accessible yet (the repository may still be private)." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Crux Docset 目前尚不支持匿名访问（仓库可能仍为私有）。" } }
+      }
+    },
+    "Using the last successful catalog; refresh did not succeed." : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Using the last successful catalog; refresh did not succeed." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "刷新未成功，正在使用上次成功获取的目录。" } }
+      }
+    },
+    "library.sources.editor.transport" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Transport Policy" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "传输策略" } }
+      }
+    },
+    "library.sources.editor.transport.local" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Local HTTP allowed" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "允许本地 HTTP" } }
+      }
+    },
+    "library.sources.editor.transport.https" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "HTTPS only" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "仅 HTTPS" } }
+      }
+    },
+    "library.tab.sources" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Sources" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "来源" } }
+      }
+    },
+    "library.sources.add" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Source" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加来源" } }
+      }
+    },
+    "library.sources.refreshAll" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Refresh Enabled Sources" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "刷新启用的来源" } }
+      }
+    },
+    "library.sources.builtin" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Built-in Sources" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "内置来源" } }
+      }
+    },
+    "library.sources.custom" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Custom Sources" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自定义来源" } }
+      }
+    },
+    "library.sources.enabled" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enabled" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启用" } }
+      }
+    },
+    "library.sources.disabled" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Disabled" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已停用" } }
+      }
+    },
+    "library.sources.edit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "编辑" } }
+      }
+    },
+    "library.sources.refresh" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Refresh" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "刷新" } }
+      }
+    },
+    "library.sources.delete" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete Source" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "删除来源" } }
+      }
+    },
+    "library.sources.delete.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Delete this source?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "删除此来源？" } }
+      }
+    },
+    "library.sources.delete.message" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Installed docsets are kept. This source will no longer refresh or install docsets." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已安装的文档会保留。此来源将不再刷新或安装文档。" } }
+      }
+    },
+    "library.sources.zeal.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enable Zeal?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启用 Zeal？" } }
+      }
+    },
+    "library.sources.zeal.message" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Zeal provides a compatible catalog protocol. Protocol compatibility does not authorize downloading or redistributing its docsets. Check the documentation publisher’s terms before downloading." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Zeal 提供兼容的目录协议。协议兼容不代表获得下载或再分发文档的授权。下载前请确认文档发布者的使用条款。" } }
+      }
+    },
+    "library.sources.zeal.enable" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enable Zeal" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "启用 Zeal" } }
+      }
+    },
+    "library.sources.private" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The Crux catalog may require private repository access. If it is unavailable, other enabled sources still work." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Crux 目录可能需要私有仓库访问权限。即使暂时不可用，其他启用的来源仍可使用。" } }
+      }
+    },
+    "library.sources.noEnabled" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enable a source in Sources to browse docsets." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请在“来源”中启用来源以浏览文档。" } }
+      }
+    },
+    "library.sources.noEntries" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "No docsets available from this source." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "此来源暂无可用文档。" } }
+      }
+    },
+    "library.sources.loading" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Refreshing source…" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在刷新来源…" } }
+      }
+    },
+    "library.sources.cache" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Showing cached catalog" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "正在显示缓存目录" } }
+      }
+    },
+    "library.sources.updated %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Updated: %@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "更新于：%@" } }
+      }
+    },
+    "library.sources.type.zeal" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Zeal Catalog" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "Zeal 目录" } }
+      }
+    },
+    "library.sources.type.versioned" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Versioned Catalog" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "版本目录" } }
+      }
+    },
+    "library.sources.type.feed" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "XML Feed (one docset)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "XML 订阅（单个文档）" } }
+      }
+    },
+    "library.sources.type.unavailable" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unavailable Origin" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "不可用的来源" } }
+      }
+    },
+    "library.sources.editor.add" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Add Source" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "添加来源" } }
+      }
+    },
+    "library.sources.editor.edit" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Edit Source" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "编辑来源" } }
+      }
+    },
+    "library.sources.editor.name" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Name" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "名称" } }
+      }
+    },
+    "library.sources.editor.type" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Type" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "类型" } }
+      }
+    },
+    "library.sources.editor.catalogURL" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Catalog URL" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "目录 URL" } }
+      }
+    },
+    "library.sources.editor.downloadRootURL" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Download Root URL" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "下载根 URL" } }
+      }
+    },
+    "library.sources.editor.feedURL" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "XML Feed URL" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "XML 订阅 URL" } }
+      }
+    },
+    "library.sources.editor.http" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Allow insecure local HTTP" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "允许不安全的本地 HTTP" } }
+      }
+    },
+    "library.sources.editor.httpHelp" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Explicit consent: HTTP is unencrypted and is allowed only for localhost or an explicit loopback/private IP address. This applies to the catalog and download URLs." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "明确同意：HTTP 未加密，仅允许 localhost 或明确的回环／私有 IP 地址。此规则同时适用于目录和下载 URL。" } }
+      }
+    },
+    "library.sources.editor.immutable" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "To change an endpoint, source type or transport policy, add a new source. Existing docsets keep their original source." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "如需更改端点、来源类型或传输策略，请添加新来源。现有文档将保留原来源。" } }
+      }
+    },
+    "library.sources.editor.save" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Save" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "保存" } }
+      }
+    },
+    "library.sources.editor.saveFailure" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "The source could not be saved. Review the source error and try again." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "无法保存来源。请检查来源错误后重试。" } }
+      }
+    },
+    "library.sources.validation.name" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter a single-line name of up to 120 characters." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请输入不超过 120 个字符的单行名称。" } }
+      }
+    },
+    "library.sources.validation.url" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Enter a valid absolute HTTP or HTTPS URL." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请输入有效的绝对 HTTP 或 HTTPS URL。" } }
+      }
+    },
+    "library.sources.validation.https" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "HTTPS is required unless you explicitly allow local HTTP." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "必须使用 HTTPS，除非明确允许本地 HTTP。" } }
+      }
+    },
+    "library.sources.validation.local" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "HTTP is allowed only for localhost or an explicit loopback/private IP address." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "HTTP 仅允许 localhost 或明确的回环／私有 IP 地址。" } }
+      }
+    },
+    "library.sources.validation.credentials" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Source URLs cannot include a username or password." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "来源 URL 不得包含用户名或密码。" } }
+      }
+    },
+    "library.sources.validation.configuration" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Review the source name and URLs. Download roots cannot contain a query or fragment." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "请检查来源名称及 URL。下载根 URL 不得包含查询参数或片段。" } }
+      }
+    },
+    "settings.updates.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Application Updates" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "应用更新" } }
+      }
+    },
+    "settings.updates.automaticChecks" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Automatically check for updates" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自动检查更新" } }
+      }
+    },
+    "settings.updates.automaticDownloads" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Automatically download updates" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "自动下载更新" } }
+      }
+    },
+    "settings.updates.help" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Review the release notes before installing an update. Your documents and settings are kept." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "安装更新前可查看版本说明。文档和设置会保留。" } }
+      }
+    },
+    "settings.updates.unavailable" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Application updates are not enabled in this build." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "此构建尚未启用应用更新。" } }
+      }
+    },
+    "library.version.label" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Version" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "版本" } }
+      }
+    },
+    "library.version.latest %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Latest (%@)" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "最新版本（%@）" } }
+      }
+    },
+    "library.version.unavailable" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Unavailable — select another version" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "不可用 — 请选择其他版本" } }
+      }
+    },
+    "library.version.archived" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Archived" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已归档" } }
+      }
+    },
+    "library.version.pinned" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Pinned" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已固定版本" } }
+      }
+    },
+    "library.version.installed %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Installed: %@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "已安装：%@" } }
+      }
+    },
+    "library.version.help" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Selecting a version does not download it. Select a specific version to keep it pinned." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "选择版本不会立即下载。选择具体版本后将固定该版本。" } }
+      }
+    },
+    "library.version.switch" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Switch Version" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "切换版本" } }
+      }
+    },
+    "library.version.replace.title" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Replace installed versions?" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "替换已安装版本？" } }
+      }
+    },
+    "library.version.replace.confirm" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Replace Version" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "替换版本" } }
+      }
+    },
+    "library.version.replace.message %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "%@\n\nEach docset keeps only one installed version. Existing versions are replaced only after successful verification. A specific version stays pinned; Latest resumes normal update checks." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "%@\n\n每个文档集只保留一个版本。新版本验证成功后才会替换旧版本。选择具体版本将固定该版本；选择最新版本将恢复常规更新检查。" } }
+      }
+    },
+    "library.version.pageMissing" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "This page is not available in the selected version. The document home page has been opened." } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "所选版本中已没有这个页面，已打开文档首页。" } }
+      }
+    },
+    "" : {
+
+    },
+    "%@, %@" : {
+      "comment" : "A label that combines the title and docset name of a search result.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "%@:" : {
+      "comment" : "A keyword from a docset, if available.",
+      "isCommentAutoGenerated" : true
+    },
+    "%lld %@" : {
+      "comment" : "A count of the number of symbols of a certain type in a docset. The argument is the count of the symbol type.",
+      "isCommentAutoGenerated" : true,
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld %2$@"
+          }
+        }
+      }
+    },
+    "app.name" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crux"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crux"
+          }
+        }
+      }
+    },
+    "app.welcome.description" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your offline documentation library starts here."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你的离线技术文档资料库将从这里开始。"
+          }
+        }
+      }
+    },
+    "app.welcome.downloadDocsets" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下载 Docset"
+          }
+        }
+      }
+    },
+    "app.welcome.manageDocsets" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理 Docset"
+          }
+        }
+      }
+    },
+    "app.welcome.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome to Crux"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "欢迎使用 Crux"
+          }
+        }
+      }
+    },
+    "Crux" : {
+      "comment" : "The name of the app.",
+      "isCommentAutoGenerated" : true
+    },
+    "fullText.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "fullText.enable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable full-text search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用全文搜索"
+          }
+        }
+      }
+    },
+    "fullText.enabled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full-text search enabled"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全文搜索已启用"
+          }
+        }
+      }
+    },
+    "fullText.error.unavailable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The full-text index could not be opened."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法打开全文索引。"
+          }
+        }
+      }
+    },
+    "fullText.rebuild" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rebuild"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重建"
+          }
+        }
+      }
+    },
+    "fullText.resume" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resume full-text indexing"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "继续全文索引"
+          }
+        }
+      }
+    },
+    "fullText.status.disabled" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Disabled"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已关闭"
+          }
+        }
+      }
+    },
+    "fullText.status.failed" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Index failed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "索引失败"
+          }
+        }
+      }
+    },
+    "fullText.status.indexing" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indexing"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在索引"
+          }
+        }
+      }
+    },
+    "fullText.status.interrupted" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paused"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已暂停"
+          }
+        }
+      }
+    },
+    "fullText.status.pending" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting to index"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待索引"
+          }
+        }
+      }
+    },
+    "fullText.status.ready" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indexed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已索引"
+          }
+        }
+      }
+    },
+    "fullText.toggle" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full-text Search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全文搜索"
+          }
+        }
+      }
+    },
+    "library.action.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "library.action.import" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导入…"
+          }
+        }
+      }
+    },
+    "library.action.manage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage Library"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "管理资料库"
+          }
+        }
+      }
+    },
+    "library.action.manage.help" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open the library window to download, import, or manage docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开资料库窗口以下载、导入或管理文档集"
+          }
+        }
+      }
+    },
+    "library.action.ok" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
+          }
+        }
+      }
+    },
+    "library.action.openLandingPage" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Start Page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开首页"
+          }
+        }
+      }
+    },
+    "library.action.refresh" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh Library"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新资料库"
+          }
+        }
+      }
+    },
+    "library.action.refresh.help" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scan the docset folder again"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新扫描 docset 目录"
+          }
+        }
+      }
+    },
+    "library.action.revealFolder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Docset Folder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示 docset 目录"
+          }
+        }
+      }
+    },
+    "library.action.revealFolder.help" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reveal the docset folder in Finder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在访达中显示 docset 目录"
+          }
+        }
+      }
+    },
+    "library.available.cached" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Showing the last successful catalog. Refresh when you are back online."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在显示上次成功获取的目录。恢复联网后请刷新。"
+          }
+        }
+      }
+    },
+    "library.available.download" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下载"
+          }
+        }
+      }
+    },
+    "library.available.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No catalog entries match this search."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有符合搜索条件的目录项。"
+          }
+        }
+      }
+    },
+    "library.available.installed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已安装"
+          }
+        }
+      }
+    },
+    "library.available.loading" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading catalog…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在加载目录…"
+          }
+        }
+      }
+    },
+    "library.available.refresh" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh Catalog"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新目录"
+          }
+        }
+      }
+    },
+    "library.available.search" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search catalog"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索目录"
+          }
+        }
+      }
+    },
+    "library.empty.description" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Download docsets from the library, import a local .docset or .tgz, or refresh after adding bundles to the docset folder."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可从资料库下载文档集，导入本地 .docset 或 .tgz，或在把 bundle 放入 docset 文件夹后刷新。"
+          }
+        }
+      }
+    },
+    "library.empty.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Docsets Installed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未安装 docset"
+          }
+        }
+      }
+    },
+    "library.error.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn’t Complete"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法完成"
+          }
+        }
+      }
+    },
+    "library.feeds.add" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Feed…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 Feed…"
+          }
+        }
+      }
+    },
+    "library.feeds.add.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a Dash Feed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 Dash Feed"
+          }
+        }
+      }
+    },
+    "library.feeds.delete" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
+          }
+        }
+      }
+    },
+    "library.feeds.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add an HTTPS Dash XML feed to install docsets that are not in the official catalog."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加 HTTPS 的 Dash XML feed，即可安装官方目录之外的文档集。"
+          }
+        }
+      }
+    },
+    "library.feeds.install" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安装"
+          }
+        }
+      }
+    },
+    "library.feeds.invalidURL" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a valid HTTPS feed URL."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请输入有效的 HTTPS Feed 地址。"
+          }
+        }
+      }
+    },
+    "library.feeds.refresh" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新"
+          }
+        }
+      }
+    },
+    "library.feeds.refreshAll" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh All"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部刷新"
+          }
+        }
+      }
+    },
+    "library.feeds.url" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://example.com/feed.xml"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "https://example.com/feed.xml"
+          }
+        }
+      }
+    },
+    "library.installed.checkUpdates" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for Updates"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新"
+          }
+        }
+      }
+    },
+    "library.installed.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No docsets are installed yet."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未安装任何文档集。"
+          }
+        }
+      }
+    },
+    "library.installed.offline" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offline"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "离线"
+          }
+        }
+      }
+    },
+    "library.installed.uninstall" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uninstall…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卸载…"
+          }
+        }
+      }
+    },
+    "library.installed.update" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更新"
+          }
+        }
+      }
+    },
+    "library.installed.updateAll" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update All"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部更新"
+          }
+        }
+      }
+    },
+    "library.jobs.cancel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        }
+      }
+    },
+    "library.jobs.cancelled" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelled"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已取消"
+          }
+        }
+      }
+    },
+    "library.jobs.clear" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Finished"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除已完成"
+          }
+        }
+      }
+    },
+    "library.jobs.completed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已安装"
+          }
+        }
+      }
+    },
+    "library.jobs.downloading" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloading…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在下载…"
+          }
+        }
+      }
+    },
+    "library.jobs.installing" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installing…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在安装…"
+          }
+        }
+      }
+    },
+    "library.jobs.queued" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "等待中…"
+          }
+        }
+      }
+    },
+    "library.jobs.retry" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试"
+          }
+        }
+      }
+    },
+    "library.jobs.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Downloads"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "传输任务"
+          }
+        }
+      }
+    },
+    "library.scope.all" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全部 docset"
+          }
+        }
+      }
+    },
+    "library.scope.all.help" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search across every installed docset"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在所有已安装的 docset 中搜索"
+          }
+        }
+      }
+    },
+    "library.section.docsets" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docset"
+          }
+        }
+      }
+    },
+    "library.section.problems" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Problems"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "问题"
+          }
+        }
+      }
+    },
+    "library.section.searchScope" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Scope"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索范围"
+          }
+        }
+      }
+    },
+    "library.source.catalog" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catalog"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目录"
+          }
+        }
+      }
+    },
+    "library.source.feed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feed"
+          }
+        }
+      }
+    },
+    "library.source.import" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Imported"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已导入"
+          }
+        }
+      }
+    },
+    "library.status.offline" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This docset’s files are currently unreachable"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此文档集的文件当前不可访问"
+          }
+        }
+      }
+    },
+    "library.tab.available" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Available"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可用"
+          }
+        }
+      }
+    },
+    "library.tab.feeds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feeds"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feed"
+          }
+        }
+      }
+    },
+    "library.tab.installed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已安装"
+          }
+        }
+      }
+    },
+    "library.uninstall.confirm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uninstall"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卸载"
+          }
+        }
+      }
+    },
+    "library.uninstall.confirm.message %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uninstalling %1$@ removes it from Crux and deletes the files on disk. This cannot be undone from inside Crux."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "卸载 %1$@ 会从 Crux 中移除它并删除磁盘上的文件。此操作无法在应用内撤销。"
+          }
+        }
+      }
+    },
+    "library.uninstall.confirm.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uninstall this docset?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要卸载此文档集吗？"
+          }
+        }
+      }
+    },
+    "library.window.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Library"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "资料库"
+          }
+        }
+      }
+    },
+    "menu.app.about %@" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "About %@" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "关于 %@" } }
+      }
+    },
+    "menu.edit.copyPageLink" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copy Page Link"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "复制页面链接"
+          }
+        }
+      }
+    },
+    "menu.edit.find" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find on Page…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在页面中查找…"
+          }
+        }
+      }
+    },
+    "menu.edit.search" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索 docset"
+          }
+        }
+      }
+    },
+    "menu.file.checkUpdates" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for Updates"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新"
+          }
+        }
+      }
+    },
+    "menu.file.closeTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭标签页"
+          }
+        }
+      }
+    },
+    "menu.file.import" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Import Docset…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导入文档集…"
+          }
+        }
+      }
+    },
+    "menu.file.library" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Library"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "资料库"
+          }
+        }
+      }
+    },
+    "menu.file.newTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新建标签页"
+          }
+        }
+      }
+    },
+    "menu.file.refreshLibrary" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh Library"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刷新资料库"
+          }
+        }
+      }
+    },
+    "menu.help.checkAppUpdates" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check for Updates"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "检查更新"
+          }
+        }
+      }
+    },
+    "menu.help.github" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crux on GitHub"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 GitHub 上查看 Crux"
+          }
+        }
+      }
+    },
+    "menu.navigate.back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "后退"
+          }
+        }
+      }
+    },
+    "menu.navigate.forward" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forward"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前进"
+          }
+        }
+      }
+    },
+    "menu.navigate.nextTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个标签页"
+          }
+        }
+      }
+    },
+    "menu.navigate.previousTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一个标签页"
+          }
+        }
+      }
+    },
+    "menu.navigate.reload" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload Page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新载入页面"
+          }
+        }
+      }
+    },
+    "menu.navigate.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navigate"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导航"
+          }
+        }
+      }
+    },
+    "menu.view.actualSize" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Actual Size"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "实际大小"
+          }
+        }
+      }
+    },
+    "menu.view.zoomIn" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom In"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大"
+          }
+        }
+      }
+    },
+    "menu.view.zoomOut" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom Out"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "缩小"
+          }
+        }
+      }
+    },
+    "reader.action.back" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "后退"
+          }
+        }
+      }
+    },
+    "reader.action.closeTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭标签页"
+          }
+        }
+      }
+    },
+    "reader.action.find" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find on Page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在页面中查找"
+          }
+        }
+      }
+    },
+    "reader.action.forward" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forward"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前进"
+          }
+        }
+      }
+    },
+    "reader.action.home" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主页"
+          }
+        }
+      }
+    },
+    "reader.action.newTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新建标签页"
+          }
+        }
+      }
+    },
+    "reader.action.reload" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新载入"
+          }
+        }
+      }
+    },
+    "reader.action.retry" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retry"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重试"
+          }
+        }
+      }
+    },
+    "reader.action.tableOfContents" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Table of Contents"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目录"
+          }
+        }
+      }
+    },
+    "reader.error.timeout" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The document timed out after one automatic retry."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文档在自动重试一次后仍然超时。"
+          }
+        }
+      }
+    },
+    "reader.error.unavailable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This page is not available. Its docset may have been removed or its storage is offline."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此页面当前不可用。对应的 docset 可能已被移除，或其存储位置已离线。"
+          }
+        }
+      }
+    },
+    "reader.find.done" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        }
+      }
+    },
+    "reader.find.next" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一个"
+          }
+        }
+      }
+    },
+    "reader.find.noMatches" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No matches"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无匹配结果"
+          }
+        }
+      }
+    },
+    "reader.find.placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find on page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在页面中查找"
+          }
+        }
+      }
+    },
+    "reader.find.previous" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Previous"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上一个"
+          }
+        }
+      }
+    },
+    "reader.progress.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在载入页面"
+          }
+        }
+      }
+    },
+    "reader.remoteNotice.continue" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow HTTPS Resources"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许 HTTPS 资源"
+          }
+        }
+      }
+    },
+    "reader.remoteNotice.disable" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep Fully Offline"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持完全离线"
+          }
+        }
+      }
+    },
+    "reader.remoteNotice.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some docsets reference images, fonts, or styles hosted on the internet. Allowing them may contact third-party servers and reveal your IP address. Plain HTTP remains blocked."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分 docset 会引用互联网上的图片、字体或样式。允许加载这些资源可能会连接第三方服务器并暴露你的 IP 地址；普通 HTTP 始终会被阻止。"
+          }
+        }
+      }
+    },
+    "reader.remoteNotice.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remote Resources and Privacy"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "远程资源与隐私"
+          }
+        }
+      }
+    },
+    "reader.tab.untitled" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新标签页"
+          }
+        }
+      }
+    },
+    "reader.tableOfContents.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Table of contents"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "页面目录"
+          }
+        }
+      }
+    },
+    "release.available.later" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "稍后"
+          }
+        }
+      }
+    },
+    "release.available.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A newer signed release is available on GitHub:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "GitHub 上已有更新的签名版本："
+          }
+        }
+      }
+    },
+    "release.available.open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open GitHub Release"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开 GitHub Release"
+          }
+        }
+      }
+    },
+    "release.available.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crux Update Available"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Crux 有可用更新"
+          }
+        }
+      }
+    },
+    "search.action.clear" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除搜索内容"
+          }
+        }
+      }
+    },
+    "search.action.openInNewTab" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open in New Tab"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在新标签页中打开"
+          }
+        }
+      }
+    },
+    "search.empty.browse.description" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type a symbol name, or use filters such as python:pprint and python,class:string."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "输入符号名称，或使用 python:pprint、python,class:string 这类过滤语法。"
+          }
+        }
+      }
+    },
+    "search.empty.browse.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search Your Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索已安装的 docset"
+          }
+        }
+      }
+    },
+    "search.empty.noDocsets.description" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a docset to the library to start searching."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "先向资料库添加 docset，然后即可搜索。"
+          }
+        }
+      }
+    },
+    "search.empty.noDocsets.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nothing to Search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂无可搜索内容"
+          }
+        }
+      }
+    },
+    "search.empty.noMatches.description" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try a shorter query, or clear the docset filter in the sidebar."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "试试更短的查询，或在侧边栏取消 docset 过滤。"
+          }
+        }
+      }
+    },
+    "search.empty.noMatches.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Matching Symbols"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有匹配的符号"
+          }
+        }
+      }
+    },
+    "search.field.accessibilityLabel" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "符号搜索"
+          }
+        }
+      }
+    },
+    "search.field.placeholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search symbols"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索符号"
+          }
+        }
+      }
+    },
+    "search.field.scopedPlaceholder" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search symbols in %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在 %@ 中搜索符号"
+          }
+        }
+      }
+    },
+    "search.panel.docsets" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docset"
+          }
+        }
+      }
+    },
+    "search.panel.mainPage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Main Page"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主页"
+          }
+        }
+      }
+    },
+    "search.panel.results" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search results for"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索结果"
+          }
+        }
+      }
+    },
+    "search.panel.similarResults" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "similar results"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "个相似结果"
+          }
+        }
+      }
+    },
+    "search.section.pages" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pages"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "页面正文"
+          }
+        }
+      }
+    },
+    "search.section.symbols" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbols"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "符号"
+          }
+        }
+      }
+    },
+    "search.title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搜索"
+          }
+        }
+      }
+    },
+    "settings.docsets.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docsets"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docset"
+          }
+        }
+      }
+    },
+    "settings.general.appearance" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Appearance" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "外观" } }
+      }
+    },
+    "settings.general.appearance.dark" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Dark" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "深色" } }
+      }
+    },
+    "settings.general.appearance.light" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Light" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "浅色" } }
+      }
+    },
+    "settings.general.appearance.system" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "System" } },
+        "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "跟随系统" } }
+      }
+    },
+    "settings.general.restoreSession" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reopen tabs from the last session"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重新打开上次会话的标签页"
+          }
+        }
+      }
+    },
+    "settings.general.restoreSession.help" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tabs whose docset is no longer installed are dropped instead of restored."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "对应 docset 已被移除的标签页会被丢弃，而不是恢复。"
+          }
+        }
+      }
+    },
+    "settings.general.storage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Storage"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存储"
+          }
+        }
+      }
+    },
+    "settings.general.storage.choose" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose Folder…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择文件夹…"
+          }
+        }
+      }
+    },
+    "settings.general.storage.default" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use Default Location"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用默认位置"
+          }
+        }
+      }
+    },
+    "settings.general.storage.help" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only docset files move. Crux keeps its database, cache, session, and preferences in Application Support."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有 docset 文件会迁移。Crux 的数据库、缓存、会话和偏好仍保留在 Application Support。"
+          }
+        }
+      }
+    },
+    "settings.general.storage.location" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docset folder"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Docset 目录"
+          }
+        }
+      }
+    },
+    "settings.general.storage.trash.confirm" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Move to Trash"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移到废纸篓"
+          }
+        }
+      }
+    },
+    "settings.general.storage.trash.failed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some previous docset copies could not be moved to Trash. They were kept in place."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分旧 docset 副本无法移入废纸篓，已保留在原位置。"
+          }
+        }
+      }
+    },
+    "settings.general.storage.trash.keep" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep Old Copy"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保留旧副本"
+          }
+        }
+      }
+    },
+    "settings.general.storage.trash.message" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The previous location still has a copy. Crux is already using the new folder. Move the old copy to Trash only if you no longer need it."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "原位置仍保留一份副本。Crux 已经在使用新文件夹。只有在不再需要旧副本时，才应将其移到废纸篓。"
+          }
+        }
+      }
+    },
+    "settings.general.storage.trash.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete the previous copy?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "要删除原来的副本吗？"
+          }
+        }
+      }
+    },
+    "settings.general.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
+        }
+      }
+    },
+    "settings.privacy.allowRemote" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow HTTPS resources in documents"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许文档加载 HTTPS 远程资源"
+          }
+        }
+      }
+    },
+    "settings.privacy.allowRemote.help" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Some docsets reference fonts, images or scripts hosted online. Loading them can reveal your IP address, user agent and which page you are reading to those servers. Turning this off keeps reading fully local."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "部分 docset 会引用在线托管的字体、图片或脚本。加载这些资源会向对应服务器暴露你的 IP 地址、User-Agent 以及正在阅读的页面。关闭此项后，阅读过程完全在本地进行。"
+          }
+        }
+      }
+    },
+    "settings.privacy.httpBlocked" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plain HTTP resources are always blocked, regardless of this setting."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无论此设置如何，明文 HTTP 资源始终被阻止。"
+          }
+        }
+      }
+    },
+    "settings.privacy.perDocset" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per-Docset Exceptions"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按 docset 单独设置"
+          }
+        }
+      }
+    },
+    "settings.privacy.perDocset.empty" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Install a docset to configure it individually."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安装 docset 后即可单独配置。"
+          }
+        }
+      }
+    },
+    "settings.privacy.remoteResources" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remote Resources"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "远程资源"
+          }
+        }
+      }
+    },
+    "settings.privacy.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐私"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.1"
+}
