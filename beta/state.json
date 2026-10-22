@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "channel": "beta",
+  "releases": [
+    {
+      "releaseId": 420968932,
+      "tag": "beta-v1.0-b1",
+      "pageURL": "https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b1",
+      "channel": "beta",
+      "name": "Crux Beta",
+      "bundleIdentifier": "com.zacharyhuo.Crux.Beta",
+      "version": "1.0",
+      "build": 1,
+      "minimumSystemVersion": "26.0",
+      "arch": "arm64",
+      "publishedAt": "2026-10-22T16:49:36.000Z",
+      "notes": "**Full Changelog**: https://github.com/zacharyhuo/Crux/commits/beta-v1.0-b1",
+      "notesSHA256": "5dcbdd24613af050c9f464d403b177f1a3bee54e379a15c940d183f70230150f",
+      "signingMode": "adhoc",
+      "notarized": false,
+      "artifact": {
+        "file": "Crux-Beta-1.0-arm64.zip",
+        "url": "https://github.com/zacharyhuo/Crux/releases/download/beta-v1.0-b1/Crux-Beta-1.0-arm64.zip",
+        "sha256": "24ad9d2a4b32a807b9b99dce69a2d605db9f4a3d4b179e7ce56282af04decef6",
+        "bytes": 9351627,
+        "signature": "eO7YMI9oDs7ABn8vQ9ZGQ0H0yIOy3m3gMzsFPWq1z7O0QSs6QtUe3t+Vcknn6ZdPslZY3xtJ4tI+bMCJ88llCA=="
+      }
+    }
+  ]
+}
