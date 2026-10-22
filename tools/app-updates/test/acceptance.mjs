@@ -122,7 +122,7 @@ try {
   const packageInfo = { ...baseInfo, SUPublicEDKey: publicKey, CFBundleVersion: '102', CFBundleShortVersionString: '1.0' };
   await writeFile(packageInfoPath, JSON.stringify(packageInfo));
   await run('/usr/bin/plutil', ['-convert', 'xml1', packageInfoPath]);
-  await run('codesign', ['--force', '--sign', '-', '--preserve-metadata=entitlements', packageApp]);
+  await run('codesign', ['--force', '--sign', '-', '--options', 'runtime', '--preserve-metadata=entitlements', packageApp]);
   const dist = path.join(root, 'dist');
   await run('bash', [path.resolve('scripts/package-release.sh'), packageApp, '1.0', dist]);
   await run('node', [path.resolve('tools/app-updates/prepare.mjs'), '--app', packageApp, '--channel', 'beta', '--tag', 'beta-v1.0-b102',
