@@ -25,6 +25,30 @@
         "bytes": 9351627,
         "signature": "eO7YMI9oDs7ABn8vQ9ZGQ0H0yIOy3m3gMzsFPWq1z7O0QSs6QtUe3t+Vcknn6ZdPslZY3xtJ4tI+bMCJ88llCA=="
       }
+    },
+    {
+      "releaseId": 422151925,
+      "tag": "beta-v1.0-b3",
+      "pageURL": "https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b3",
+      "channel": "beta",
+      "name": "Crux Beta",
+      "bundleIdentifier": "com.zacharyhuo.Crux.Beta",
+      "version": "1.0",
+      "build": 3,
+      "minimumSystemVersion": "26.0",
+      "arch": "arm64",
+      "publishedAt": "2026-10-23T17:58:09.000Z",
+      "notes": "# Crux Beta 1.0 (build 3) / Early Preview\n\n## 中文\n\n适用于 Apple Silicon（arm64），要求 macOS 26 或更高版本。\n\n- 首次安装请下载 **Crux-Beta-1.0-arm64.dmg**，通过 Finder 将 **Crux Beta.app** 拖入 Applications 后启动。\n- ZIP 包也包含应用，并用于 Sparkle 更新；GitHub 的 Source code 压缩包是源码，不是安装包。\n- 已安装且配置更新密钥的同渠道版本可通过应用菜单的 Check for Updates 检查更新。\n- SHA256SUMS.txt 提供安装包校验和。Crux 与 Crux Beta 使用独立的数据目录和更新渠道。\n\n本预览版采用 ad-hoc 签名，未经 Apple Developer ID 签名或公证。首次打开可能被 Gatekeeper 阻止；仅在信任此应用时，在系统设置 → 隐私与安全性中选择“仍要打开”。不要关闭系统整体安全检查。\n\nSparkle 签名用于验证更新包，与 Apple 公证不同。自动发布并不代表真实更新安装与重启验收已完成，验收结果会在此补充。\n\n## English\n\nFor Apple Silicon (arm64), requiring macOS 26 or later.\n\n- For a first installation, download **Crux-Beta-1.0-arm64.dmg** and use Finder to drag **Crux Beta.app** into Applications before launching it.\n- The ZIP also contains the app and is used for Sparkle updates. GitHub Source code archives are not app installers.\n- Installed builds on the same channel with an update key can use Check for Updates in the app menu.\n- SHA256SUMS.txt provides package checksums. Crux and Crux Beta use separate data directories and update channels.\n\nThis preview is ad-hoc signed, without Apple Developer ID signing or notarization. Gatekeeper may block the first launch. Only if you trust this app, use System Settings → Privacy & Security → Open Anyway. Do not disable system-wide security checks.\n\nSparkle signatures verify updates and are separate from Apple notarization. Automated publication does not establish that real update installation and relaunch acceptance has passed; results will be added here.\n\n[Commits / 提交记录](https://github.com/zacharyhuo/Crux/commits/beta-v1.0-b3)\n",
+      "notesSHA256": "b8f92ab51faa2872170cefe0e5a7ab975fc14dec4f8373d5b1caef2ffd97b5f1",
+      "signingMode": "adhoc",
+      "notarized": false,
+      "artifact": {
+        "file": "Crux-Beta-1.0-arm64.zip",
+        "url": "https://github.com/zacharyhuo/Crux/releases/download/beta-v1.0-b3/Crux-Beta-1.0-arm64.zip",
+        "sha256": "b5299c1f8efecad2d493d766d0dde54b4230d5d2535591815cf349a198b313b9",
+        "bytes": 9351296,
+        "signature": "vlB3qbO+PgBno2v3PfppjCUBy4MInnemlL+u/1A+MRDBs97v0xgM7jnZBqyqQhYRQoOIvCys4NMTOSOCnraDBQ=="
+      }
     }
   ]
 }
