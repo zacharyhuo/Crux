@@ -1,7 +1,8 @@
 import { test } from 'node:test';
+import { readFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
 import { generateKeyPairSync, sign } from 'node:crypto';
-import { makeRecord, makeAppcast, addRecord, sha256, verifyArchive } from '../appcast.mjs';
+import { makeRecord, makeAppcast, addRecord, sha256, verifyArchive, verifyChannelState } from '../appcast.mjs';
 
 function fixture(channel = 'stable', build = 1) {
   const pair = generateKeyPairSync('ed25519'), bytes = Buffer.from('archive bytes');
@@ -57,4 +58,17 @@ test('beta tag channel and monotonic CFBundleVersion are checked and empty notes
   assert.match(feed, /<sparkle:channel>beta<\/sparkle:channel>/);
   assert.match(feed, /No release notes were provided/);
   assert.match(feed, /beta-v1\.0-b3/);
+});
+
+
+test('real Sparkle 2.10 serialized feed authenticates its unchanged ledger', () => {
+  const feed = readFileSync(new URL('./fixtures/sparkle-2.10-beta-b1.xml', import.meta.url));
+  const state = JSON.parse(readFileSync(new URL('./fixtures/sparkle-2.10-beta-b1.json', import.meta.url)));
+  const key = 'AhTfgPsK0kUUy/aeMTTVTCkOwoVQAvzRNcX/ZkVlepc=';
+  assert.doesNotThrow(() => verifyChannelState(feed, state, key));
+  const edited = structuredClone(state);
+  edited.releases[0].notes = 'Changed notes';
+  edited.releases[0].notesSHA256 = sha256(edited.releases[0].notes);
+  assert.throws(() => verifyChannelState(feed, edited, key), /authenticated/);
+  assert.throws(() => verifyChannelState(Buffer.from(feed.toString().replace('Crux beta updates', 'Crux beta updateX')), state, key), /verification/);
 });

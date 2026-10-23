@@ -37,7 +37,13 @@ export function verifySignedFeed(bytes, publicKey) {
 // RSS. A branch writer cannot turn edited history into an approved signed feed.
 export function verifyChannelState(bytes, state, publicKey) {
   const authenticated = verifySignedFeed(bytes, publicKey);
-  if (!authenticated.equals(Buffer.from(makeAppcast(state)))) {
+  makeAppcast(state); // Validate the complete ledger before accepting its binding.
+  // sign_update reserializes XML (declaration, attributes, empty elements) and
+  // adds a warning. Bind the ledger through its signed header digest instead
+  // of comparing XML serialization bytes. Only the header can supply a digest;
+  // release Markdown/CDATA cannot impersonate it.
+  const header = /^<\?xml[^?]*\?>\s*(?:<!-- sparkle-sign-warning:[\s\S]*?-->\s*)?<!-- crux-state-sha256: ([a-f0-9]{64}) -->/.exec(authenticated.toString('utf8'));
+  if (!header || header[1] !== sha256(Buffer.from(JSON.stringify(state)))) {
     throw new Error('Channel ledger does not match its authenticated signed feed');
   }
 }
