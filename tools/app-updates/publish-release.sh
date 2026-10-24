@@ -17,9 +17,15 @@ test ! -e "$key_file"
 test ! -e "$certificate"
 test ! -e "$notary_key"
 test ! -e "$keychain"
+publication_complete=false
 cleanup() {
+  status=$?
+  trap - EXIT
   rm -f -- "$key_file" "$certificate" "$notary_key"
   if [ -f "$keychain" ]; then security delete-keychain "$keychain"; fi
+  # Bash 3.2 can enter EXIT with status 0 after a nounset expansion failure.
+  if [ "$publication_complete" != true ]; then exit 1; fi
+  exit "$status"
 }
 trap cleanup EXIT
 umask 077
@@ -110,11 +116,12 @@ Sparkle signatures verify updates and are separate from Apple notarization. Auto
 
 [Commits / 提交记录](https://github.com/zacharyhuo/Crux/commits/$RELEASE_TAG)
 EOF
-args=(); if [ "$CHANNEL" = beta ]; then args+=(--prerelease); fi
+args=(--title "$app_name $version (build $build)"); if [ "$CHANNEL" = beta ]; then args+=(--prerelease); fi
 gh release create "$RELEASE_TAG" "$dist/$prefix-$version-arm64.zip" "$dist/$prefix-$version-arm64.dmg" \
   "$dist/SHA256SUMS.txt" "$dist/update-build.json" --repo zacharyhuo/Crux --verify-tag --notes-file "$notes_file" \
-  --title "$app_name $version (build $build)" "${args[@]}"
+  "${args[@]}"
 release_id="$(gh api "repos/zacharyhuo/Crux/releases/tags/$RELEASE_TAG" --jq '.id')"
 node tools/app-updates/publish.mjs --release "$release_id" --build "$dist/update-build.json" --directory "$dist" \
   --approved-plan "$RUNNER_TEMP/approved-plan.json" --candidate-receipt "$RUNNER_TEMP/Crux-payload/build-receipt.json" --candidate-payload "$RUNNER_TEMP/Crux-payload/payload.tar" \
   --key-file "$key_file" --sign-tool "$RUNNER_TEMP/CruxSigner/bin/sign_update"
+publication_complete=true
