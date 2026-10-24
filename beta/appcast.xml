@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><!-- sparkle-sign-warning:
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
---><!-- crux-state-sha256: af0ca47e47a6e78fa88223cd9129336521c877423265d050b92d9cd3b56fe3f2 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Crux beta updates</title><item><title>Crux Beta 1.0</title><link>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b3</link><pubDate>Fri, 23 Oct 2026 17:58:09 GMT</pubDate><sparkle:version>3</sparkle:version><sparkle:shortVersionString>1.0</sparkle:shortVersionString><sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion><sparkle:channel>beta</sparkle:channel><sparkle:fullReleaseNotesLink>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b3</sparkle:fullReleaseNotesLink><description sparkle:format="markdown"><![CDATA[# Crux Beta 1.0 (build 3) / Early Preview
+--><!-- crux-state-sha256: 5f8ea816749132eb48048285ac8d4aecab1e4bedb808f92a3e0f6466ee9b08bd --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0"><channel><title>Crux beta updates</title><item><title>Crux Beta 1.0</title><link>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b3</link><pubDate>Fri, 23 Oct 2026 17:58:09 GMT</pubDate><sparkle:version>3</sparkle:version><sparkle:shortVersionString>1.0</sparkle:shortVersionString><sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion><sparkle:channel>beta</sparkle:channel><sparkle:fullReleaseNotesLink>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b3</sparkle:fullReleaseNotesLink><description sparkle:format="markdown"><![CDATA[# Crux Beta 1.0 (build 3) / Early Preview
 
 ## 中文
 
@@ -13,7 +13,7 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
 
 本预览版采用 ad-hoc 签名，未经 Apple Developer ID 签名或公证。首次打开可能被 Gatekeeper 阻止；仅在信任此应用时，在系统设置 → 隐私与安全性中选择“仍要打开”。不要关闭系统整体安全检查。
 
-Sparkle 签名用于验证更新包，与 Apple 公证不同。自动发布并不代表真实更新安装与重启验收已完成，验收结果会在此补充。
+Sparkle 签名用于验证更新包，与 Apple 公证不同。已完成真实验收：Beta build 1 经公开 HTTPS 下载更新至 build 3，安装并自动重启成功；更新后签名完整，文档阅读正常，再次检查显示已是最新版。
 
 ## English
 
@@ -26,11 +26,11 @@ For Apple Silicon (arm64), requiring macOS 26 or later.
 
 This preview is ad-hoc signed, without Apple Developer ID signing or notarization. Gatekeeper may block the first launch. Only if you trust this app, use System Settings → Privacy & Security → Open Anyway. Do not disable system-wide security checks.
 
-Sparkle signatures verify updates and are separate from Apple notarization. Automated publication does not establish that real update installation and relaunch acceptance has passed; results will be added here.
+Sparkle signatures verify updates and are separate from Apple notarization. Real acceptance passed: Beta build 1 downloaded build 3 over public HTTPS, installed it, and relaunched successfully. The updated signature is intact, document reading works, and a subsequent update check reports the latest version.
 
 [Commits / 提交记录](https://github.com/zacharyhuo/Crux/commits/beta-v1.0-b3)
 ]]></description><enclosure url="https://github.com/zacharyhuo/Crux/releases/download/beta-v1.0-b3/Crux-Beta-1.0-arm64.zip" length="9351296" type="application/octet-stream" sparkle:edSignature="vlB3qbO+PgBno2v3PfppjCUBy4MInnemlL+u/1A+MRDBs97v0xgM7jnZBqyqQhYRQoOIvCys4NMTOSOCnraDBQ=="></enclosure></item>
 <item><title>Crux Beta 1.0</title><link>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b1</link><pubDate>Thu, 22 Oct 2026 16:49:36 GMT</pubDate><sparkle:version>1</sparkle:version><sparkle:shortVersionString>1.0</sparkle:shortVersionString><sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion><sparkle:channel>beta</sparkle:channel><sparkle:fullReleaseNotesLink>https://github.com/zacharyhuo/Crux/releases/tag/beta-v1.0-b1</sparkle:fullReleaseNotesLink><description sparkle:format="markdown"><![CDATA[**Full Changelog**: https://github.com/zacharyhuo/Crux/commits/beta-v1.0-b1]]></description><enclosure url="https://github.com/zacharyhuo/Crux/releases/download/beta-v1.0-b1/Crux-Beta-1.0-arm64.zip" length="9351627" type="application/octet-stream" sparkle:edSignature="eO7YMI9oDs7ABn8vQ9ZGQ0H0yIOy3m3gMzsFPWq1z7O0QSs6QtUe3t+Vcknn6ZdPslZY3xtJ4tI+bMCJ88llCA=="></enclosure></item></channel></rss><!-- sparkle-signatures:
-edSignature: oWUmrqwONP5XLZLcrB0RlcDmTRSSHNEB6HhByDP+3FePiu4pEsOq1Dhhv65NyKjUvyUGxrxbpmY7e3pdKYM2Dg==
-length: 4361
+edSignature: WWH26BrATfszYOa6jsznIWCl+SivyWDUWtle2a1ZMRr/OuXY1nzOk+QY/d67kZ6aowdquTmQkIeuFzYxMf5LDg==
+length: 4550
 -->
